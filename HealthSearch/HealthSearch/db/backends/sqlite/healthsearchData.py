@@ -35,6 +35,3 @@ cursor = conn.cursor()
 readSQL(sqlFile, conn, cursor)
 
 dataConnection.close_conection(cursor, conn)
-
-
-

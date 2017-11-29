@@ -55,7 +55,7 @@ ROOT_URLCONF = 'HealthSearch.urls'
 TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [],
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
     'APP_DIRS': True,
     'OPTIONS': {
       'context_processors': [
@@ -65,8 +65,16 @@ TEMPLATES = [
         'django.contrib.messages.context_processors.messages',
       ],
     },
+    'loaders': [
+      # insert your TEMPLATE_LOADERS here
+      ##'django_mobile.loader.CachedLoader',
+      'django.template.loaders.filesystem.Loader',
+      'django.template.loaders.app_directories.Loader',
+    ],
   },
 ]
+
+#TEMPLATE_DIRS=('/home/long/Documents/yanlidocu/yanliblog/healthsearch/HealthSearch/patientSearch/templates/')
 
 WSGI_APPLICATION = 'HealthSearch.wsgi.application'
 
