@@ -29,4 +29,5 @@ create table ResourceURL_DataResource(ResourceURL_ID INTEGER NOT NULL,
 Resource_ID INTEGER NOT NULL,
 PRIMARY KEY(ResourceURL_ID,Resource_ID)
 );
-
+insert into DataResource (Resource_ID, ResourceName, URL, Frequency) values (1, 'webmed', 'https://www.webmd.com/heart-disease/heart-failure/default.htm',0);
+insert into DataResource (Resource_ID, ResourceName, URL, Frequency) values (2, 'tripdatabase', 'https://www.tripdatabase.com/search?criteria=headache&lang=en',0)

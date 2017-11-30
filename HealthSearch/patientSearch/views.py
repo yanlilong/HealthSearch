@@ -11,7 +11,7 @@ webmed = "web"
 
 
 def index(request):
-  #  template = get_template('patientSearch/search_form.html')
-  # return (HttpResponse(template.render({'webmed': webmed}, request)))
-  context = {'webmed': webmed}
-  return render(request, 'patientSearch/search_form.html')
+   template = get_template('patientSearch/search_form.html')
+   return (HttpResponse(template.render({'webmed': webmed}, request)))
+ # context = {'webmed': webmed}
+  #return render(request, 'patientSearch/search_form.html')
