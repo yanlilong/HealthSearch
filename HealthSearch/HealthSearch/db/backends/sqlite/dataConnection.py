@@ -1,4 +1,4 @@
-__author__ = 'l94wang'
+__author__ = 'yanlilong'
 import sqlite3
 from sqlite3 import Error
 import os
@@ -41,7 +41,7 @@ def execute_query(self, sql_command):
   try:
     self.cursor = self.conn.cursor()
     for row in self.cursor.execute(sql_command):
-      print result_tuple.__add__(row)
+      print (result_tuple.__add__(row))
 
   except Error as self.e:
     print(self.e)

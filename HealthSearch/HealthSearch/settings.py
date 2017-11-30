@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -55,8 +56,7 @@ ROOT_URLCONF = 'HealthSearch.urls'
 TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(BASE_DIR, 'templates')],
-    'APP_DIRS': True,
+    'DIRS': [os.path.join(BASE_DIR,'template')],
     'OPTIONS': {
       'context_processors': [
         'django.template.context_processors.debug',
@@ -64,17 +64,17 @@ TEMPLATES = [
         'django.contrib.auth.context_processors.auth',
         'django.contrib.messages.context_processors.messages',
       ],
-    },
-    'loaders': [
+       'loaders': [
       # insert your TEMPLATE_LOADERS here
       ##'django_mobile.loader.CachedLoader',
       'django.template.loaders.filesystem.Loader',
       'django.template.loaders.app_directories.Loader',
     ],
+    },
+
   },
 ]
 
-#TEMPLATE_DIRS=('/home/long/Documents/yanlidocu/yanliblog/healthsearch/HealthSearch/patientSearch/templates/')
 
 WSGI_APPLICATION = 'HealthSearch.wsgi.application'
 
