@@ -36,24 +36,14 @@
     </div>
   </div>
 <div id="content-main">
-  <form action="" method="post" id="search_form"><input type='hidden'
-                                                        name='csrfmiddlewaretoken'
-                                                        value='GF18JmXROxZoklfaWQcsBKSgSBeWOBA5'/>
-    <div class="form-row">
-      <label>Datasource</label> <select name="datasource_list">
-      <option>{{webmed}}</option>
-      <option>oud</option>
-    </select>
-    </div>
-    <div class="form-row">
-      <label>Age</label> <input id="id_age" maxlength="60" name="age" type="text"/>
-      <select name="sexlist">
-        <option>Female</option>
-        <option>Male</option>
-      </select>
-      <label>Sypotom</label> <input id="id_sypotom" maxlength="256" name="sypotom" type="text"/>
-      <label>Disease</label> <input id="id_disease" maxlength="256" name="disease" type="text"/>
-    </div>
+
+  <form action="" method="post" id="query_form">
+    {% csrf_token %}
+    {% for field in query_form %}
+    {{ field }}
+    {% endfor%}
+
+
     <div class="submit-row">
       <input type="submit" value="Search"/>
     </div>
