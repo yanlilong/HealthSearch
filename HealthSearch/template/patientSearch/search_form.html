@@ -40,7 +40,7 @@
   <form action="" method="post" id="query_form">
     {% csrf_token %}
     {% for field in query_form %}
-    {{ field }}
+    {{ field.label }}:{{ field }}
     {% endfor%}
 
 
