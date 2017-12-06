@@ -21,7 +21,8 @@ class QueryFrom(ModelForm):
     )
 
     widgets = {
+      'age': Textarea(attrs={'cols': 4, 'rows': 1}),
       'sex': Select(attrs={'class': 'select'}, choices=SEX_CHOICES),
-      'sympo': Textarea(attrs={'cols': 30, 'rows': 2}),
-      'disease': Textarea(attrs={'cols': 30, 'rows': 2}),
+      'sympo': Textarea(attrs={'cols': 50, 'rows': 1}),
+      'disease': Textarea(attrs={'cols': 50, 'rows': 1}),
     }

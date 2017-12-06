@@ -16,35 +16,51 @@
   <div id="header">
     <div id="branding">
 
-      <h1 id="site-name">Health Search</a></h1>
+      <h1 id="site-name" style="width:100%;text-align:center">Health Search</h1>
 
     </div>
 
 
   </div>
 </div>
-  <!-- END Header -->
+<!-- END Header -->
 
 
-  <!-- Content -->
-  <div >
-    <div>
+<!-- Content -->
+<div>
+  <div>
 
-      <h1>Paitent information</h1>
+    <h1>Patient information</h1>
 
 
-    </div>
   </div>
+</div>
 <div id="content-main">
 
   <form action="" method="post" id="query_form">
     {% csrf_token %}
-    {% for field in query_form %}
-    {{ field.label }}:{{ field }}
-    {% endfor%}
 
 
-    <div class="submit-row">
+    <div style="width:75%" align="right">
+
+      <label>Datasource:</label>
+      <select name="datasource_list">
+        <option>webmed</option>
+        <option>oud</option>
+      </select>
+    </div>
+
+    <table style="width:90%">
+      <tr>
+        {% for field in query_form %}
+        <td>
+          {{ field.label }}:{{ field }}
+        </td>
+        {% endfor%}
+      </tr>
+    </table>
+
+    <div class="submit-row" style="width:80%" align="center">
       <input type="submit" value="Search"/>
     </div>
   </form>
@@ -56,9 +72,10 @@
   </ol>
   <script type="text/javascript">
 document.getElementById('id_age').focus()
-      </script>
+
+  </script>
 </div>
-<br />
+<br/>
 </div>
 <!-- END Content -->
 <div></div>
