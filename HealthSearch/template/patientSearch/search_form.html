@@ -45,8 +45,9 @@
 
       <label>Datasource:</label>
       <select name="datasource_list">
-        <option>webmed</option>
-        <option>oud</option>
+         {%for resource_name in resource_name_list%}
+        <option>{{resource_name}}</option>
+        {% endfor%}
       </select>
     </div>
 

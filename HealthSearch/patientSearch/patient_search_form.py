@@ -26,3 +26,4 @@ class QueryFrom(ModelForm):
       'sympo': Textarea(attrs={'cols': 50, 'rows': 1}),
       'disease': Textarea(attrs={'cols': 50, 'rows': 1}),
     }
+
