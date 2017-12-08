@@ -7,8 +7,6 @@ import create_view
 
 from django.http import HttpResponse
 from patient_search_form import QueryFrom
-from models import DataResource
-from django.shortcuts import render
 
 
 def index(request):
