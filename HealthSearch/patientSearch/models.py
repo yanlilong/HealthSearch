@@ -10,7 +10,7 @@ class Query(models.Model):
   sex = models.BooleanField()
   sympo = models.TextField()
   disease = models.TextField()
-  query_last_time = models.DateTimeField
+  query_last_time = models.DateTimeField()
   freq = models.IntegerField()
 
 
