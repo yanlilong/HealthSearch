@@ -33,10 +33,10 @@ class ResultURL(models.Model):
 
 
 class Query_ResultURL(models.Model):
-  query = models.ForeignKey(Query, on_delete=models.CASCADE)
-  result_url = models.ForeignKey(ResultURL, on_delete=models.CASCADE)
+  query = models.ForeignKey(Query, on_delete=models.DO_NOTHING)
+  result_url = models.ForeignKey(ResultURL, on_delete=models.DO_NOTHING)
 
 
 class ResultURL_DataResource(models.Model):
-  result_url=models.ForeignKey(ResultURL, on_delete=models.CASCADE)
-  data_resource=models.ForeignKey(DataResource,on_delete=models.CASCADE)
+  result_url=models.ForeignKey(ResultURL, on_delete=models.DO_NOTHING)
+  data_resource=models.ForeignKey(DataResource,on_delete=models.DO_NOTHING)
