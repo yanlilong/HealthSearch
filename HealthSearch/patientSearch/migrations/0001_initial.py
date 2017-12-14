@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
             name='Query_ResultURL',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('query_id', models.ForeignKey(to='patientSearch.Query')),
+                ('query_id', models.ForeignKey(to='patientSearch.Query',on_delete=models.DO_NOTHING)),
             ],
         ),
         migrations.CreateModel(
@@ -54,6 +54,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='query_resulturl',
             name='resulturl_id',
-            field=models.ForeignKey(to='patientSearch.ResultURL'),
+            field=models.ForeignKey(to='patientSearch.ResultURL',on_delete=models.DO_NOTHING),
         ),
     ]
