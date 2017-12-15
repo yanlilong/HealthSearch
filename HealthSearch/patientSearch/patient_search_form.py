@@ -1,6 +1,6 @@
 from django.forms import ModelForm, Textarea, Select
 from django import forms
-from models import Query, DataResource
+from patientSearch.models import Query, DataResource
 from django.utils.translation import ugettext as _
 
 
