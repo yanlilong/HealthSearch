@@ -1,31 +1,6 @@
-<!DOCTYPE html>
 
-<html lang="en-us">
-<head>
-  <title>Health Search|search</title>
-</head>
-
-
-<body style="background-color:powderblue;">
-
-<!-- Container -->
-<div>
-
-
-  <!-- Header -->
-  <div id="header">
-    <div id="branding">
-
-      <h1 id="site-name" style="width:100%;text-align:center">Health Search</h1>
-
-    </div>
-
-
-  </div>
-</div>
-<!-- END Header -->
-
-
+{% extends 'patientSearch/base.html' %}
+{% block content %}
 <!-- Content -->
 <div>
   <div>
@@ -45,7 +20,7 @@
 
       <label>Datasource:</label>
       <select name="datasource_list">
-         {%for resource_name in resource_name_list%}
+        {%for resource_name in resource_name_list%}
         <option>{{resource_name}}</option>
         {% endfor%}
       </select>
@@ -71,17 +46,9 @@
     <li>result2</li>
     <li>result3</li>
   </ol>
-  <script type="text/javascript">
-document.getElementById('id_age').focus()
 
-  </script>
-</div>
-<br/>
 </div>
 <!-- END Content -->
-<div></div>
-</div>
-<!-- END Container -->
 
-</body>
-</html>
+<!-- END Container -->
+{% endblock %}
